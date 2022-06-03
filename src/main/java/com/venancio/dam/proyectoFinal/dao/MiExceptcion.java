@@ -1,4 +1,4 @@
-package com.venancio.dam.cursosFormacion.dao;
+package com.venancio.dam.proyectoFinal.dao;
 
 public class MiExceptcion extends Exception {
 

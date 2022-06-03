@@ -1,4 +1,4 @@
-package com.venancio.dam.cursosFormacion.model;
+package com.venancio.dam.proyectoFinal.model;
 
 import java.sql.Date;
 import java.util.Objects;

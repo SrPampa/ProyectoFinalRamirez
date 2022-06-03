@@ -1,4 +1,4 @@
-package com.venancio.dam.tema8_web_bootstrap;
+package com.venancio.dam.proyectoFinal;
 
 import java.io.IOException;
 
@@ -9,8 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.venancio.dam.tema8_web_bootstrap.config.ThymeleafConfig;
-import com.venancio.dam.tema8_web_bootstrap.utils.DBConnection;
+import com.venancio.dam.proyectoFinal.config.ThymeleafConfig;
+import com.venancio.dam.proyectoFinal.utils.DBConnection;
 
 public class GenericServlet extends HttpServlet{
 	

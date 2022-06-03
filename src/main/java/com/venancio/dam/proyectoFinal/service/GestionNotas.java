@@ -1,12 +1,12 @@
-package com.venancio.dam.cursosFormacion.service;
+package com.venancio.dam.proyectoFinal.service;
 
 import java.util.HashSet;
 import java.util.Set;
 
-import com.venancio.dam.cursosFormacion.model.Alumno;
-import com.venancio.dam.cursosFormacion.model.Curso;
-import com.venancio.dam.cursosFormacion.model.Evaluacion;
-import com.venancio.dam.cursosFormacion.repository.CursoRepository;
+import com.venancio.dam.proyectoFinal.model.Alumno;
+import com.venancio.dam.proyectoFinal.model.Curso;
+import com.venancio.dam.proyectoFinal.model.Evaluacion;
+import com.venancio.dam.proyectoFinal.repository.CursoRepository;
 
 public class GestionNotas {
 

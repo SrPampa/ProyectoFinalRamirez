@@ -1,9 +1,9 @@
-package com.venancio.dam.tema8_web_bootstrap.repository;
+package com.venancio.dam.proyectoFinal.repository;
 
 import java.util.List;
 
-import com.venancio.dam.tema8_web_bootstrap.dao.ProductDAO;
-import com.venancio.dam.tema8_web_bootstrap.model.Producto;
+import com.venancio.dam.proyectoFinal.dao.ProductDAO;
+import com.venancio.dam.proyectoFinal.model.Producto;
 
 public class ProductRepository {
 

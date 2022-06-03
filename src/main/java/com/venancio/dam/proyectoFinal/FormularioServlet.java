@@ -1,4 +1,4 @@
-package com.venancio.dam.tema8_web_bootstrap;
+package com.venancio.dam.proyectoFinal;
 
 import java.io.IOException;
 import java.time.LocalDate;
@@ -12,8 +12,8 @@ import javax.servlet.http.HttpServletResponse;
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.WebContext;
 
-import com.venancio.dam.tema8_web_bootstrap.model.Producto;
-import com.venancio.dam.tema8_web_bootstrap.service.ProductService;
+import com.venancio.dam.proyectoFinal.model.Producto;
+import com.venancio.dam.proyectoFinal.service.ProductService;
 
 
 

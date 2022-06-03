@@ -1,17 +1,17 @@
-package com.venancio.dam.cursosFormacion.service;
+package com.venancio.dam.proyectoFinal.service;
 
 import java.util.HashSet;
 import java.util.Set;
 
-import com.venancio.dam.cursosFormacion.model.Curso;
-import com.venancio.dam.cursosFormacion.utils.DBCOnection;
+import com.venancio.dam.proyectoFinal.model.Curso;
+import com.venancio.dam.proyectoFinal.utils.DBConnection;
 
 public class Init {
 
 	public static void main(String[] args) {
 		
 		
-	DBCOnection.getInstance().getConexion();
+	DBConnection.getInstance().getConnection();
 	GestionNotas service = new GestionNotas();
 	Set<Curso> cursos = new HashSet<>();
 	
@@ -19,6 +19,6 @@ public class Init {
 	cursos.forEach(x -> System.out.println(x));
 	
 	
-	DBCOnection.getInstance().destroyConexion();
+	DBConnection.getInstance().destroyConnection();
 	}
 }

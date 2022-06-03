@@ -1,4 +1,4 @@
-package com.venancio.dam.tema8_web_bootstrap.model;
+package com.venancio.dam.proyectoFinal.model;
 
 import java.util.List;
 
