@@ -5,15 +5,22 @@ import java.util.Objects;
 public class Evaluacion {
 
 	private int codigoAlumno;
+	private String nombreAlumno;
+	private String apellidosAlumno;
 	private int codigoCurso;
-	private int notaFinal;
-	private String Observaciones;
-	
-	public Evaluacion(int codigoAlumno, int codigoCurso, int notaFinal, String observaciones) {
+	private String nombreCurso;
+	private double notaFinal;
+	private String observaciones;
+
+	public Evaluacion(int codigoAlumno, String nombreAlumno, String apellidosAlumno, int codigoCurso,
+			String nombreCurso, double notaFinal, String observaciones) {
 		this.codigoAlumno = codigoAlumno;
+		this.nombreAlumno = nombreAlumno;
+		this.apellidosAlumno = apellidosAlumno;
 		this.codigoCurso = codigoCurso;
+		this.nombreCurso = nombreCurso;
 		this.notaFinal = notaFinal;
-		Observaciones = observaciones;
+		this.observaciones = observaciones;
 	}
 
 	public int getCodigoAlumno() {
@@ -24,6 +31,30 @@ public class Evaluacion {
 		this.codigoAlumno = codigoAlumno;
 	}
 
+	public String getNombreAlumno() {
+		return nombreAlumno;
+	}
+
+	public void setNombreAlumno(String nombreAlumno) {
+		this.nombreAlumno = nombreAlumno;
+	}
+
+	public String getApellidosAlumno() {
+		return apellidosAlumno;
+	}
+
+	public void setApellidosAlumno(String apellidosAlumno) {
+		this.apellidosAlumno = apellidosAlumno;
+	}
+
+	public String getNombreCurso() {
+		return nombreCurso;
+	}
+
+	public void setNombreCurso(String nombreCurso) {
+		this.nombreCurso = nombreCurso;
+	}
+
 	public int getCodigoCurso() {
 		return codigoCurso;
 	}
@@ -32,25 +63,26 @@ public class Evaluacion {
 		this.codigoCurso = codigoCurso;
 	}
 
-	public int getNotaFinal() {
+	public double getNotaFinal() {
 		return notaFinal;
 	}
 
-	public void setNotaFinal(int notaFinal) {
+	public void setNotaFinal(double notaFinal) {
 		this.notaFinal = notaFinal;
 	}
 
 	public String getObservaciones() {
-		return Observaciones;
+		return observaciones;
 	}
 
 	public void setObservaciones(String observaciones) {
-		Observaciones = observaciones;
+		this.observaciones = observaciones;
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(Observaciones, codigoAlumno, codigoCurso, notaFinal);
+		return Objects.hash(apellidosAlumno, codigoAlumno, codigoCurso, nombreAlumno, nombreCurso, notaFinal,
+				observaciones);
 	}
 
 	@Override
@@ -62,18 +94,18 @@ public class Evaluacion {
 		if (getClass() != obj.getClass())
 			return false;
 		Evaluacion other = (Evaluacion) obj;
-		return Objects.equals(Observaciones, other.Observaciones) && codigoAlumno == other.codigoAlumno
-				&& codigoCurso == other.codigoCurso && notaFinal == other.notaFinal;
+		return Objects.equals(apellidosAlumno, other.apellidosAlumno) && codigoAlumno == other.codigoAlumno
+				&& codigoCurso == other.codigoCurso && Objects.equals(nombreAlumno, other.nombreAlumno)
+				&& Objects.equals(nombreCurso, other.nombreCurso)
+				&& Double.doubleToLongBits(notaFinal) == Double.doubleToLongBits(other.notaFinal)
+				&& Objects.equals(observaciones, other.observaciones);
 	}
 
 	@Override
 	public String toString() {
-		return "Evaluacion [codigoAlumno=" + codigoAlumno + ", codigoCurso=" + codigoCurso + ", notaFinal="
-				+ notaFinal + ", Observaciones=" + Observaciones + "]";
+		return "Evaluacion [codigoAlumno=" + codigoAlumno + ", nombreAlumno=" + nombreAlumno + ", apellidosAlumno="
+				+ apellidosAlumno + ", codigoCurso=" + codigoCurso + ", nombreCurso=" + nombreCurso + ", notaFinal="
+				+ notaFinal + ", observaciones=" + observaciones + "]";
 	}
-	
-	
-	
-	
-	
+
 }
