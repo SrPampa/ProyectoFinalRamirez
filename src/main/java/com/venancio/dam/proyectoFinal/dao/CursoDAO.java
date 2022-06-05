@@ -11,9 +11,9 @@ import com.venancio.dam.proyectoFinal.utils.DBConnection;
 
 public class CursoDAO {
 
-	private final String SELECT_CURSOS = "SELECT * FROM CURSOS";
+	private static final String SELECT_CURSOS = "SELECT * FROM CURSOS";
 
-	public Set<Curso> getCurses() {
+	public Set<Curso> getCursos() {
 
 		Set<Curso> lista = new HashSet<>();
 		try {
