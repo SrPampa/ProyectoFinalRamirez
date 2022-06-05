@@ -4,31 +4,19 @@ import java.util.Objects;
 
 public class Evaluacion {
 
-	private int codigoAlumno;
 	private String nombreAlumno;
 	private String apellidosAlumno;
-	private int codigoCurso;
 	private String nombreCurso;
 	private double notaFinal;
 	private String observaciones;
 
-	public Evaluacion(int codigoAlumno, String nombreAlumno, String apellidosAlumno, int codigoCurso,
-			String nombreCurso, double notaFinal, String observaciones) {
-		this.codigoAlumno = codigoAlumno;
+	public Evaluacion(String nombreAlumno, String apellidosAlumno, String nombreCurso, double notaFinal,
+			String observaciones) {
 		this.nombreAlumno = nombreAlumno;
 		this.apellidosAlumno = apellidosAlumno;
-		this.codigoCurso = codigoCurso;
 		this.nombreCurso = nombreCurso;
 		this.notaFinal = notaFinal;
 		this.observaciones = observaciones;
-	}
-
-	public int getCodigoAlumno() {
-		return codigoAlumno;
-	}
-
-	public void setCodigoAlumno(int codigoAlumno) {
-		this.codigoAlumno = codigoAlumno;
 	}
 
 	public String getNombreAlumno() {
@@ -55,14 +43,6 @@ public class Evaluacion {
 		this.nombreCurso = nombreCurso;
 	}
 
-	public int getCodigoCurso() {
-		return codigoCurso;
-	}
-
-	public void setCodigoCurso(int codigoCurso) {
-		this.codigoCurso = codigoCurso;
-	}
-
 	public double getNotaFinal() {
 		return notaFinal;
 	}
@@ -81,8 +61,7 @@ public class Evaluacion {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(apellidosAlumno, codigoAlumno, codigoCurso, nombreAlumno, nombreCurso, notaFinal,
-				observaciones);
+		return Objects.hash(apellidosAlumno, nombreAlumno, nombreCurso, notaFinal, observaciones);
 	}
 
 	@Override
@@ -94,18 +73,15 @@ public class Evaluacion {
 		if (getClass() != obj.getClass())
 			return false;
 		Evaluacion other = (Evaluacion) obj;
-		return Objects.equals(apellidosAlumno, other.apellidosAlumno) && codigoAlumno == other.codigoAlumno
-				&& codigoCurso == other.codigoCurso && Objects.equals(nombreAlumno, other.nombreAlumno)
-				&& Objects.equals(nombreCurso, other.nombreCurso)
+		return Objects.equals(apellidosAlumno, other.apellidosAlumno) && Objects.equals(nombreCurso, other.nombreCurso)
 				&& Double.doubleToLongBits(notaFinal) == Double.doubleToLongBits(other.notaFinal)
 				&& Objects.equals(observaciones, other.observaciones);
 	}
 
 	@Override
 	public String toString() {
-		return "Evaluacion [codigoAlumno=" + codigoAlumno + ", nombreAlumno=" + nombreAlumno + ", apellidosAlumno="
-				+ apellidosAlumno + ", codigoCurso=" + codigoCurso + ", nombreCurso=" + nombreCurso + ", notaFinal="
-				+ notaFinal + ", observaciones=" + observaciones + "]";
+		return "Evaluacion, nombreAlumno=" + nombreAlumno + ", apellidosAlumno=" + apellidosAlumno + ", nombreCurso="
+				+ nombreCurso + ", notaFinal=" + notaFinal + ", observaciones=" + observaciones + "]";
 	}
 
 }
