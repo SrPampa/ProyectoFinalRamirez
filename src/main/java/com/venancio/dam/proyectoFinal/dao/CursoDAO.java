@@ -1,4 +1,4 @@
-package com.venancio.dam.cursosFormacion.dao;
+package com.venancio.dam.proyectoFinal.dao;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -6,18 +6,18 @@ import java.sql.SQLException;
 import java.util.HashSet;
 import java.util.Set;
 
-import com.venancio.dam.cursosFormacion.model.Curso;
-import com.venancio.dam.cursosFormacion.utils.DBCOnection;
+import com.venancio.dam.proyectoFinal.model.Curso;
+import com.venancio.dam.proyectoFinal.utils.DBConnection;
 
 public class CursoDAO {
 
-	private final String SELECT_CURSOS = "SELECT * FROM CURSOS";
+	private static final String SELECT_CURSOS = "SELECT * FROM CURSOS";
 
-	public Set<Curso> getCurses() {
+	public Set<Curso> getCursos() {
 
 		Set<Curso> lista = new HashSet<>();
 		try {
-			PreparedStatement stmt = DBCOnection.getInstance().getConexion().prepareStatement(SELECT_CURSOS);
+			PreparedStatement stmt = DBConnection.getInstance().getConnection().prepareStatement(SELECT_CURSOS);
 			ResultSet rs = stmt.executeQuery();
 			while (rs.next()) {
 				Curso curso = new Curso(rs.getLong("CODIGOCURSO"), rs.getString("CURSO"), rs.getDate("FECHAINICIO"),

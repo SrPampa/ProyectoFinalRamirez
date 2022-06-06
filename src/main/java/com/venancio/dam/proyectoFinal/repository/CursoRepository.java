@@ -1,9 +1,10 @@
-package com.venancio.dam.cursosFormacion.repository;
+package com.venancio.dam.proyectoFinal.repository;
 
 import java.util.Set;
 
-import com.venancio.dam.cursosFormacion.dao.CursoDAO;
-import com.venancio.dam.cursosFormacion.model.Curso;
+import com.venancio.dam.proyectoFinal.dao.CursoDAO;
+import com.venancio.dam.proyectoFinal.model.Curso;
+
 
 public class CursoRepository {
 
@@ -22,9 +23,8 @@ public class CursoRepository {
 		dao = new CursoDAO();
 	}
 	
-	public Set<Curso> findAll(){
-		return dao.getCurses();
-		
+	public Set<Curso> getCursos() {
+		return dao.getCursos();
 	}
-	
+
 }

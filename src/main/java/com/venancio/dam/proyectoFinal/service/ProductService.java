@@ -1,9 +1,9 @@
-package com.venancio.dam.tema8_web_bootstrap.service;
+package com.venancio.dam.proyectoFinal.service;
 
 import java.util.List;
 
-import com.venancio.dam.tema8_web_bootstrap.model.Producto;
-import com.venancio.dam.tema8_web_bootstrap.repository.ProductRepository;
+import com.venancio.dam.proyectoFinal.model.Producto;
+import com.venancio.dam.proyectoFinal.repository.ProductRepository;
 
 public class ProductService {
 	

@@ -1,4 +1,4 @@
-package com.venancio.dam.tema8_web_bootstrap.dao;
+package com.venancio.dam.proyectoFinal.dao;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -6,8 +6,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.venancio.dam.tema8_web_bootstrap.model.Producto;
-import com.venancio.dam.tema8_web_bootstrap.utils.DBConnection;
+import com.venancio.dam.proyectoFinal.model.Producto;
+import com.venancio.dam.proyectoFinal.utils.DBConnection;
 
 public class ProductDAO {
 	
