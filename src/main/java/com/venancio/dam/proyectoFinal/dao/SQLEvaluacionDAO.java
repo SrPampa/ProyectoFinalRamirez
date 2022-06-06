@@ -9,7 +9,7 @@ import java.util.Set;
 import com.venancio.dam.proyectoFinal.model.Evaluacion;
 import com.venancio.dam.proyectoFinal.utils.DBConnection;
 
-public class EvaluacionDAO {
+public class SQLEvaluacionDAO implements EvaluacionDAO {
 
 	private static final String SELECT_NOTAS = "SELECT A.Nombre, A.Apellidos, C.Curso, E.NotaFinal, E.Observaciones "
 			+ "FROM evaluaciones E, alumnos A, cursos C WHERE A.CodigoAlumno = E.CodigoAlumno AND E.CodigoCurso = C.CodigoCurso";

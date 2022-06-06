@@ -2,12 +2,12 @@ package com.venancio.dam.proyectoFinal.repository;
 
 import java.util.Set;
 
-import com.venancio.dam.proyectoFinal.dao.AlumnoDAO;
+import com.venancio.dam.proyectoFinal.dao.SQLAlumnoDAO;
 import com.venancio.dam.proyectoFinal.model.Alumno;
 
 public class AlumnoRepository {
 
-	private AlumnoDAO dao;
+	private SQLAlumnoDAO dao;
 	
 	private static AlumnoRepository instance;
 	
@@ -19,7 +19,7 @@ public class AlumnoRepository {
 	}
 
 	public AlumnoRepository() {
-		this.dao = new AlumnoDAO();
+		this.dao = new SQLAlumnoDAO();
 	}
 
 	public Set<Alumno> getAlumnos() {

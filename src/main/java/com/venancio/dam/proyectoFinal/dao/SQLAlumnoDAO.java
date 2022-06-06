@@ -9,7 +9,7 @@ import java.util.Set;
 import com.venancio.dam.proyectoFinal.model.Alumno;
 import com.venancio.dam.proyectoFinal.utils.DBConnection;
 
-public class AlumnoDAO {
+public class SQLAlumnoDAO implements AlumnoDAO {
 
 	private static final String SELECT_ALUMNOS = "SELECT * FROM ALUMNOS";
 	private static final String INSERT_ALUMNO = "INSERT INTO ALUMNOS (SELECT MAX(CODIGOALUMNO)+1,?,?,?,?)";
@@ -38,7 +38,7 @@ public class AlumnoDAO {
 		boolean add = false;
 		try {
 			PreparedStatement stmt = DBConnection.getInstance().getConnection().prepareStatement(INSERT_ALUMNO);
-			
+
 			stmt.setString(1, a.getNombre());
 			stmt.setString(2, a.getApellidos());
 			stmt.setString(3, a.getTelefono());

@@ -9,7 +9,7 @@ import java.util.Set;
 import com.venancio.dam.proyectoFinal.model.Curso;
 import com.venancio.dam.proyectoFinal.utils.DBConnection;
 
-public class CursoDAO {
+public class SQLCursoDAO implements CursoDAO {
 
 	private static final String SELECT_CURSOS = "SELECT * FROM CURSOS";
 

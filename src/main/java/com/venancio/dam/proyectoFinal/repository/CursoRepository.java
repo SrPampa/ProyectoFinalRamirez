@@ -2,13 +2,13 @@ package com.venancio.dam.proyectoFinal.repository;
 
 import java.util.Set;
 
-import com.venancio.dam.proyectoFinal.dao.CursoDAO;
+import com.venancio.dam.proyectoFinal.dao.SQLCursoDAO;
 import com.venancio.dam.proyectoFinal.model.Curso;
 
 
 public class CursoRepository {
 
-	private CursoDAO dao = null;
+	private SQLCursoDAO dao = null;
 	
 	private static CursoRepository instance;
 	
@@ -20,7 +20,7 @@ public class CursoRepository {
 	}
 	
 	public CursoRepository() {
-		dao = new CursoDAO();
+		dao = new SQLCursoDAO();
 	}
 	
 	public Set<Curso> getCursos() {
