@@ -23,9 +23,8 @@ public class CursoRepository {
 		dao = new CursoDAO();
 	}
 	
-	public Set<Curso> findAll(){
-		return dao.getCurses();
-		
+	public Set<Curso> getCursos() {
+		return dao.getCursos();
 	}
-	
+
 }
