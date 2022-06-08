@@ -44,6 +44,10 @@
   }
 }
 
+nav{
+
+}
+
 body {
   margin: 0;
   font-family: var(--bs-font-sans-serif);
@@ -206,7 +210,7 @@ a {
   text-decoration: underline;
 }
 a:hover {
-  color: #0a58ca;
+  color: #c3d4ed;
 }
 
 a:not([href]):not([class]), a:not([href]):not([class]):hover {
