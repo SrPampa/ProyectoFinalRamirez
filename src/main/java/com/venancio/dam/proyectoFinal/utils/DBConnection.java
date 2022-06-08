@@ -11,21 +11,19 @@ public class DBConnection {
 	private final String PASS = "";
 
 	private Connection conexion = null;
-	
-	
-    // Singleton
-    private static DBConnection instance;
-	
-    /**
-    * Return a singleton instance
-    */
-    public static synchronized DBConnection getInstance() {
-        if (instance == null) {
-            instance = new DBConnection();
-        }
-        return instance;
-    }
-	
+
+	// Singleton
+	private static DBConnection instance;
+
+	/**
+	 * Return a singleton instance
+	 */
+	public static synchronized DBConnection getInstance() {
+		if (instance == null) {
+			instance = new DBConnection();
+		}
+		return instance;
+	}
 
 	private DBConnection() {
 		System.out.println("Creando conexión con la BBDD...");
@@ -34,15 +32,15 @@ public class DBConnection {
 		} catch (ClassNotFoundException e1) {
 			e1.printStackTrace();
 		}
-		
+
 		try {
 			this.conexion = DriverManager.getConnection(URL, USER, PASS);
 			System.out.println("Conexión con la BBDD establecida con éxito!!");
 		} catch (SQLException e) {
 			System.err.println("Error al crear la conexión con la BBDD...");
-            System.err.printf("Mensaje   : %s %n", e.getMessage());
-            System.err.printf("SQL estado: %s %n", e.getSQLState());
-            System.err.printf("Cód error : %s %n", e.getErrorCode());
+			System.err.printf("Mensaje   : %s %n", e.getMessage());
+			System.err.printf("SQL estado: %s %n", e.getSQLState());
+			System.err.printf("Cód error : %s %n", e.getErrorCode());
 		}
 	}
 
@@ -57,9 +55,9 @@ public class DBConnection {
 			System.out.println("Conexión con la BBDD cerrada!!");
 		} catch (SQLException e) {
 			System.err.println("Error al cerrar la conexión con la BBDD...");
-            System.err.printf("Mensaje   : %s %n", e.getMessage());
-            System.err.printf("SQL estado: %s %n", e.getSQLState());
-            System.err.printf("Cód error : %s %n", e.getErrorCode());
+			System.err.printf("Mensaje   : %s %n", e.getMessage());
+			System.err.printf("SQL estado: %s %n", e.getSQLState());
+			System.err.printf("Cód error : %s %n", e.getErrorCode());
 		} finally {
 			instance = null;
 		}
