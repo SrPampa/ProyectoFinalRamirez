@@ -5,15 +5,17 @@ public class SQLFactoryDAO extends FactoryDAO {
 	/*
 	 * Este no es el url, hay que poner el que si es
 	 */
-	private final String URL = "jdbc:mysql://127.0.0.1:3307/productos";
+	private final String URL = "jdbc:mysql://127.0.0.1:3307/ramirez";
 	private final String DRIVER = "com.mysql.cj.jdbc.Driver";
 
-	/*
-	 * metodo de conexion con la base de datos
-	 */
-//	public  createConnection() {
 
-//	}
+	public String getURL() {
+		return URL;
+	}
+
+	public String getDriver() {
+		return DRIVER;
+	}
 
 	public SQLAlumnoDAO getAlumnoDAO() {
 		return new SQLAlumnoDAO();

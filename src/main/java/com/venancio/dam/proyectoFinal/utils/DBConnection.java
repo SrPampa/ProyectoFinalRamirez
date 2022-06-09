@@ -4,9 +4,10 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+import com.venancio.dam.proyectoFinal.dao.SQLFactoryDAO;
+
 public class DBConnection {
 
-	private final String URL = "jdbc:mysql://127.0.0.1:3307/productos";
 	private final String USER = "root";
 	private final String PASS = "";
 
@@ -27,14 +28,15 @@ public class DBConnection {
 
 	private DBConnection() {
 		System.out.println("Creando conexión con la BBDD...");
+		SQLFactoryDAO fdao = new SQLFactoryDAO();
 		try {
-			Class.forName("com.mysql.cj.jdbc.Driver");
+			Class.forName(fdao.getDriver());
 		} catch (ClassNotFoundException e1) {
 			e1.printStackTrace();
 		}
 
 		try {
-			this.conexion = DriverManager.getConnection(URL, USER, PASS);
+			this.conexion = DriverManager.getConnection(fdao.getURL(), USER, PASS);
 			System.out.println("Conexión con la BBDD establecida con éxito!!");
 		} catch (SQLException e) {
 			System.err.println("Error al crear la conexión con la BBDD...");
