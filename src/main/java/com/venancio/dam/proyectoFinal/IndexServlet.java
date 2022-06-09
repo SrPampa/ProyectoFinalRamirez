@@ -25,7 +25,7 @@ public class IndexServlet extends GenericServlet {
             throws ServletException, IOException {
     	
     	// Para ejecutar:
-    	// http://localhost:8080/tema8_web_bootstrap/
+    	// http://localhost:8080/ProyectoFinalRamirez/
     	
     	// revisar https://www.codejava.net/ides/eclipse/how-to-create-java-web-project-with-maven-in-eclipse
     	

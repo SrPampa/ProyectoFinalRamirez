@@ -7,15 +7,15 @@
 		
 	<servlet>
         <servlet-name>IndexServlet</servlet-name>
-        <servlet-class>com.venancio.dam.tema8_web_bootstrap.IndexServlet</servlet-class>
+        <servlet-class>com.venancio.dam.proyectoFinal.IndexServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>ListadoServlet</servlet-name>
-        <servlet-class>com.venancio.dam.tema8_web_bootstrap.ListadoServlet</servlet-class>
+        <servlet-class>com.venancio.dam.proyectoFinal.ListadoServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>FormularioServlet</servlet-name>
-        <servlet-class>com.venancio.dam.tema8_web_bootstrap.FormularioServlet</servlet-class>
+        <servlet-class>com.venancio.dam.proyectoFinal.FormularioServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
